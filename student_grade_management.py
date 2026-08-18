@@ -17,6 +17,13 @@ def management() :
         student.append(f"{name} : {grade}")
         print(f"Added {name} with a {grade}")
 
+    elif operation==2:
+        update=input("Enter  what you want to update : ")
+        if update in student:
+            up=input("Enter new task : ")
+            ind=student.index(update)
+            student[ind]=up
+            print(f"Updated task {up}")
     
 
 
