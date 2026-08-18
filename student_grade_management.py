@@ -7,24 +7,68 @@
     5. Exit
 
 """
-def management() : 
-    student=[]
-    operation=int(input("Student Grade Management System\n 1. Add Student\n 2. Update Student\n 3. Delete Student\n 4. View Student\n 5. Exit\n Enter your choice :  "))
+student_grade={ }
+def add(name,grade) :
+    student_grade[name]=grade
+    print(f"Added {name} with a{grade}")
     
-    if operation == 1:
-        name=input("Enter student name = ")
-        grade=int(input("Enter student grade = "))
-        student.append(f"{name} : {grade}")
-        print(f"Added {name} with a {grade}")
+def update(name,grade):
+    if name in student_grade:
+        student_grade[name]=grade
 
-    elif operation==2:
-        update=input("Enter  what you want to update : ")
-        if update in student:
-            up=input("Enter new task : ")
-            ind=student.index(update)
-            student[ind]=up
-            print(f"Updated task {up}")
-    
+        print(f"{name} with marks are updated {grade}")
+
+    else:
+        print(f"{name} is not found!")
+
+def delete(name):
+    if name in student_grade:
+        del student_grade[name]
+        print(f"{name} has been successfully deleted")
+
+    else:
+        print(f"{name} is not found!")
+
+def view():
+    if student_grade:
+        for name,grade in student_grade.items():
+            print(f"{name} : {grade}")
+
+    else :
+        print("No students found/added") 
 
 
-management()
+
+def main():
+    while True:
+        print("\nStudent Grade Management System")   
+        print("1. Add Student") 
+        print("2. Update Student") 
+        print("3. Delete Student") 
+        print("4. View Student") 
+        print("5. Exit") 
+
+        choice=int(input("Enter your choice = "))
+
+        if choice==1:
+            name = input("Enter Your Name = ")
+            grade = input("Enter Your Grade = ")
+            add(name,grade)
+
+        elif choice==2:
+            name = input("Enter Your Name = ")
+            grade = input("Enter Your Grade = ")
+            update(name,grade)
+
+        elif choice==3:
+            name = input("Enter Your Name = ")
+            delete(name)
+
+        elif choice==4:
+            view()
+
+        elif choice==5:
+            print("Closing the program....")
+            break
+        
+main()
