@@ -2,5 +2,6 @@
 
 a=0
 b=1
-for _ in range(1,11):         #we use "_" as temporary variable underscore tb use krte h jb hme variable  jyada impportant nhi hota    print(a,end=" ")
+for _ in range(1,11):           
+    print(a,end=" ")
     a,b=b,a+b

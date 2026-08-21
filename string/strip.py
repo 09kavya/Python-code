@@ -1,5 +1,5 @@
 """
-    strip function removes white spaces 
+    strip function 
 
 """
 

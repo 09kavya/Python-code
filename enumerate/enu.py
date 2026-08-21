@@ -1,6 +1,6 @@
 """
 enumerate-
-    ** wefdlist ke sath inexing no.
+    
 
 """
 

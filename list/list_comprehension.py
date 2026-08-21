@@ -1,6 +1,6 @@
 """
      list comprehension-
-        List Comprehension Python me list banane ka short aur easy way hai.
+       
 
 
     program i have list i want another list  that have square no. of 1st list
