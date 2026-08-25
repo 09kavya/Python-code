@@ -1,20 +1,19 @@
 #Count even and odd digits separately
 
-num=int(input("Enter the number = " ))
+num = int(input("Enter the number = "))
 
-count1=0
-count2=0
-a=0
+even = 0
+odd = 0
 
-while a<=num:
+while num > 0:
+    digit = num % 10
 
-    if num%2==0:
-        count1 +=1
-
+    if digit % 2 == 0:
+        even += 1
     else:
-        count2 +=1
+        odd += 1
 
-    a += 1
+    num = num // 10
 
-print(f"The total even no. are {count1}")
-print(f"The total odd no. are {count2}")
+print("Even =", even)
+print("Odd =", odd)
