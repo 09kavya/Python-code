@@ -1,0 +1,15 @@
+#Find the digital root of a number.
+
+num=int(input("Enter the number : "))
+while num>=10:
+    sum=0
+
+    while num>0:
+        digit=num%10
+        sum=sum+digit
+
+        num=num//10
+
+    num=sum
+
+print("Digital root =", num)
