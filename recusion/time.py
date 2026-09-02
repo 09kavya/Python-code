@@ -1,4 +1,4 @@
-#if 2newborn rabbits are put in a pen , how many rabbits will be in the pen after 1  year
+import time
 
 def fibonacci(x):
     if x==0 or x==1:
@@ -6,5 +6,6 @@ def fibonacci(x):
     else:
         return fibonacci(x-1)+fibonacci(x-2)
 
-
-print(fibonacci(12))
+start=time.time()
+print(fibonacci(27))
+print(time.time()-start)
