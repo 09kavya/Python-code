@@ -6,4 +6,10 @@ Output: 2 4 6 8 10
 """
 def even(num):
     if num==0:
-        return "Even"
+        return 
+    
+    even(num-2)
+    print(num, end=" ")
+
+
+even(10)
